@@ -5,9 +5,7 @@ var params = new URLSearchParams(window.location.search);
 
 
 
-function pasek(){
-      document.querySelector(".bottom_bar").style.height = "70px"
-}
+
 
 let webManifest = {
   "name": "",
@@ -17,16 +15,7 @@ let webManifest = {
   "display": "standalone"
 };
 
-window.addEventListener(
-  "touchmove",
-  function (event) {
-    if (event.scale !== 1) {
-      event.preventDefault();
-      event.stopImmediatePropagation();
-    }
-  },
-  { passive: false }
-);
+
 
 let manifestElem = document.createElement('link');
 manifestElem.setAttribute('rel', 'manifest');
